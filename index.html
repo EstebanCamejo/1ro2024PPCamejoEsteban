@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Parcial</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor" id ="formDatos" >
+        <h2>Form Datos</h2><br>
+        <label>Filtrar por:
+            <select id="filtroFormDatos">
+                <option value="opcionTodos">Todos</option>
+                <option value="opcionCiudadano">Ciudadano</option>
+                <option value="opcionExtrangero">Extrangero</option>
+            </select> 
+        </label>
+        <br>
+        <label>Calcular Promedio:</label>
+        <input type="text" id="edadPromedio" readonly>
+        <button id="btnCalcular">Calcular</button>
+        <br>
+        <br>
+        <label for="">Mostrar Columnas</label>
+            <div id="datosContainer">  
+            
+                <input type="checkbox" id="chkId" value="0" class="checkbox" checked name="id">
+                <label for="chkId">ID</label>
+
+                <input type="checkbox" id="chkNombre" value="1" class="checkbox" checked name="nombre">
+                <label for="chkNombre">Nombre</label>
+            
+                <input type="checkbox" id="chkApellido" value="2" class="checkbox" checked name="apellido">
+                <label for="chkApellido">Apellido</label>
+
+                <input type="checkbox" id="chkEdad" value="3" class="checkbox" checked name="edad">
+                <label for="chkEdad">Fecha de Nacimiento</label>
+                
+                <input type="checkbox" id="chkSueldo" value="4" class="checkbox" checked name="sueldo">
+                <label for="chkSueldo">Dni</label>
+
+                <input type="checkbox" id="chkCompras" value="5" class="checkbox" checked name="compras">
+                <label for="chkCompras">Pais de Origen</label>
+
+
+            </div>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th value="asc">Id</th>
+                    <th value="asc">Nombre</th>
+                    <th value="asc">Apellido</th>
+                    <th value="asc">Fecha de Nacimiento</th>                 
+                    <th value="asc">Dni</th>                                   
+                    <th value="asc">Pais de Origen</th>
+                  
+                </tr>
+            </thead>
+        </table>
+        <br>
+        <br>
+        <button id="btnAgregar" class="botones">Agregar</button>
+    </div>
+
+    <div class="contenedorABM" id = "formAbm">
+        <h2>Formulario ABM</h2>
+            
+            <div class="form-row">
+                <label>Tipo:</label>
+                    <Select id="selABM">
+                        <option value="Ciudadano">Ciudadano</option>
+                        <option value="Extrangero">Extrangero</option>
+                    </Select>
+            </div>
+
+            <form id="formulario">
+
+                <div class="form-row">
+                    <label>Id:</label>
+                    <input type="text" id="textId" disabled> <br>
+                </div>
+
+                <div class="form-row">
+                    <label>Nombre:</label>    
+                    <input type="text" id="textNombre" required> <br>
+                </div>
+
+                <div class="form-row">
+                    <label>Apellido:</label>    
+                    <input type="text" id="textApellido" required> <br>
+                </div>
+
+                <div class="form-row">
+                    <label>Fecha de Nacimiento:</label>    
+                    <input type="number" id="textFechaDeNacimiento" required name="edad"> <br>
+                </div>
+                
+                <div id="camposCiudadano">
+                    <div class="form-row">
+                        <label >Dni:</label>    
+                        <input type="number" id="textDni" required min="0"> <br>
+                    </div>
+
+                </div>
+
+                <div id="camposExtrangero">
+                    
+                   
+                    <div class="form-row">        
+                        <label >Pais de Origen:</label>    
+                        <input type="text" id="textPaisDeOrigen" required min="0"> <br>
+                    </div>
+
+                </div>
+            
+
+                <div class="form-row">
+                    <button id="btnAlta" class="botones">Aceptar</button>
+                    <button id="btnModificar" class="botones">Modificar</button>    
+                    <button id="btnEliminar" class="botones">Eliminar</button>
+                    <button id="btnCancelar" class="botones">Cancelar</button>                    
+                </div>
+
+            </form>
+    </div>
+    <script src="pp.js"> </script>
+</body>
+</html>
